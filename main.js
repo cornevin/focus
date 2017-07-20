@@ -11,7 +11,6 @@ let mainWindow
 
 app.on('ready', () => {
 
-    let mainWindow = new BrowserWindow({width: 300, height: 600})
-
+    let mainWindow = new BrowserWindow({width: 300, height: 900})
     mainWindow.loadURL(`file://${__dirname}/app/index.html`)
 })

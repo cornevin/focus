@@ -3,17 +3,22 @@ import { render } from 'react-dom'
 import { } from './styles/global.css'
 import Countdown from './countdown'
 import Home from './home'
-import { Switch, Route } from 'react-router-dom'
+import Room from './room'
+import { Switch, Redirect , Route,
+  BrowserRouter as Router,
+ } from 'react-router-dom'
 
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        <Switch>
-          <Route default path='/' component={Home} />
-          <Route exact path='/room' component={Countdown} />
-        </Switch>
+        <Router>
+          <div>
+          <Route path='/C:/Users/quentin.cornevin/Documents/work/focus/app/index.html' component={Home} />
+          <Route path='/room' component={Room} />
+          </div>
+        </Router>
       </div>
     )
   }
